@@ -7,7 +7,7 @@ public class Tugas127 {
         int hargaTiket = 50000;
         int jumlahTiket, totalHarga, totalHargaSetelahDiskon, totalTiketTerjual = 0, totalHargaPenjualan = 0;
         double diskon = 0.0;
-        String jawaban = "";
+        int jawaban = 0;
 
         do {
             System.out.print("Masukkan jumlah tiket yang ingin dibeli: ");
@@ -37,10 +37,10 @@ public class Tugas127 {
             System.out.println("Total harga setelah diskon: Rp " + totalHargaSetelahDiskon);
             scanner.nextLine(); 
 
-            System.out.print("Apakah Anda ingin membeli tiket lagi? (ya/tidak): ");
-            jawaban = scanner.next(); 
+            System.out.print("Apakah Anda ingin membeli tiket lagi? (Ketik 1 untuk ya, 0 untuk tidak): ");
+            jawaban = scanner.nextInt(); 
 
-        } while (jawaban.equalsIgnoreCase("ya"));
+        } while (jawaban == 1);
 
         System.out.println("Total tiket terjual: " + totalTiketTerjual);
         System.out.println("Total harga penjualan: Rp " + totalHargaPenjualan);
